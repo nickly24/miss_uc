@@ -12,21 +12,6 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* Временный тестовый элемент */}
-      <div style={{
-        position: 'fixed',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        background: 'red',
-        color: 'white',
-        padding: '20px',
-        zIndex: 99999,
-        fontSize: '24px',
-        fontWeight: 'bold'
-      }}>
-        ТЕСТ - Если видите это, React работает!
-      </div>
       <div className="page-container">
         {/* Главная плашка с кнопкой Пополнить */}
         <div className="main-card">
