@@ -11,26 +11,28 @@
   padding: 20px 16px;
   padding-bottom: 100px;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   background: transparent;
   display: block !important;
   visibility: visible !important;
+  min-height: 100vh;
 }
 
 .main-card {
-  background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark)) !important;
+  background: linear-gradient(135deg, #FF69B4, #FF1493) !important;
   border-radius: 20px;
   padding: 32px 24px;
   margin-bottom: 16px;
-  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.3);
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.5);
   position: relative;
   overflow: hidden;
   animation: fadeIn 0.5s ease-out;
   min-height: 200px;
-  z-index: 10;
+  z-index: 1;
   opacity: 1 !important;
   visibility: visible !important;
   display: block !important;
+  width: 100%;
 }
 
 .main-card-bg {
@@ -107,7 +109,7 @@
 }
 
 .stars-card {
-  background: var(--tg-theme-secondary-bg-color) !important;
+  background: rgba(42, 42, 42, 0.95) !important;
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 16px;
@@ -115,8 +117,10 @@
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  z-index: 10;
+  z-index: 1;
   position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
 }
 
 .stars-card.disabled {
