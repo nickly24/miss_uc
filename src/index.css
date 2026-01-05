@@ -36,22 +36,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #root {
-  width: 350px;
-  height: 670px;
+  width: 100%;
+  min-height: 100vh;
   position: relative;
   background: transparent;
   z-index: 1;
-  overflow: hidden;
   display: block !important;
   visibility: visible !important;
 }

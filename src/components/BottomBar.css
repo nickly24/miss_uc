@@ -1,9 +1,10 @@
 .bottom-bar {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
+  max-width: 350px;
   background: rgba(26, 26, 26, 0.9);
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--tg-theme-secondary-bg-color);
