@@ -54,27 +54,36 @@
 
 .main-card-content {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   text-align: center;
-  color: white;
+  color: white !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .main-card-icon {
   font-size: 64px;
   margin-bottom: 16px;
   animation: bounce 2s ease-in-out infinite;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .main-card-title {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
+  color: white !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .main-card-subtitle {
   font-size: 16px;
-  opacity: 0.9;
+  opacity: 1 !important;
   margin-bottom: 24px;
+  color: white !important;
+  visibility: visible !important;
 }
 
 .main-card-button {
@@ -121,13 +130,17 @@
 .stars-card-title {
   font-size: 20px;
   font-weight: 600;
-  color: var(--tg-theme-text-color);
+  color: var(--tg-theme-text-color) !important;
   margin-bottom: 4px;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .stars-card-subtitle {
   font-size: 14px;
-  color: var(--tg-theme-hint-color);
+  color: var(--tg-theme-hint-color) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 @keyframes fadeIn {

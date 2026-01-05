@@ -12,7 +12,22 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      <div className="page-container">
+      {/* Тестовый элемент для проверки */}
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        background: 'red',
+        color: 'white',
+        padding: '10px',
+        zIndex: 99999,
+        fontSize: '16px',
+        textAlign: 'center'
+      }}>
+        ТЕСТ - React работает! Если видите это - контент рендерится
+      </div>
+      <div className="page-container" style={{ marginTop: '50px' }}>
         {/* Главная плашка с кнопкой Пополнить */}
         <div className="main-card">
           <div 

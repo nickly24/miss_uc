@@ -18,7 +18,8 @@ const initializeTelegramSDK = async () => {
     }
 
   } catch (error) {
-    console.error('Ошибка инициализации:', error)
+    // Это нормально, если открыто вне Telegram
+    console.log('Приложение открыто вне Telegram, продолжаем работу')
   }
 }
 
