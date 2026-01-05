@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useTelegram } from './hooks/useTelegram'
 import Home from './pages/Home'
 import CodePurchase from './pages/CodePurchase'
