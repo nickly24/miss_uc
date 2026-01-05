@@ -8,10 +8,13 @@
 .page-container {
   padding: 20px 16px;
   padding-bottom: 100px;
+  position: relative;
+  z-index: 100;
+  background: transparent;
 }
 
 .main-card {
-  background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark));
+  background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark)) !important;
   border-radius: 20px;
   padding: 32px 24px;
   margin-bottom: 16px;
@@ -20,6 +23,9 @@
   overflow: hidden;
   animation: fadeIn 0.5s ease-out;
   min-height: 200px;
+  z-index: 100;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .main-card-bg {
