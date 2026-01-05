@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BottomBar from '../components/BottomBar'
 import './Home.css'
 
 const Home = () => {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    console.log('Home component rendered')
+  }, [])
 
   return (
     <div className="home-page">

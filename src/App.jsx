@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { useTelegram } from './hooks/useTelegram'
 import Home from './pages/Home'
 import CodePurchase from './pages/CodePurchase'
@@ -14,16 +14,20 @@ function App() {
   const { tg, initTelegram } = useTelegram()
 
   useEffect(() => {
+    console.log('App component mounted')
     initTelegram()
     // Устанавливаем фон для псевдоэлемента
     const appElement = document.querySelector('.app')
     if (appElement) {
       appElement.style.setProperty('--bg-image', `url(${bgImage})`)
+      console.log('Background image set')
+    } else {
+      console.error('App element not found')
     }
   }, [])
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL || ''}>
       <div className="app" style={{ '--bg-image': `url(${bgImage})` }}>
         <Routes>
           <Route path="/" element={<Home />} />
