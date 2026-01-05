@@ -5,6 +5,11 @@ import App from './App'
 
 import { init, miniApp } from '@telegram-apps/sdk'
 
+// Устанавливаем цвет заголовка
+if (miniApp && miniApp.setHeaderColor && miniApp.setHeaderColor.isAvailable()) {
+  miniApp.setHeaderColor('#fcb69f')
+}
+
 const initializeTelegramSDK = async () => {
   try {
     await init()

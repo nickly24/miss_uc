@@ -3,14 +3,18 @@
   background: transparent;
   position: relative;
   z-index: 10;
+  display: block !important;
+  visibility: visible !important;
 }
 
 .page-container {
   padding: 20px 16px;
   padding-bottom: 100px;
   position: relative;
-  z-index: 100;
+  z-index: 10;
   background: transparent;
+  display: block !important;
+  visibility: visible !important;
 }
 
 .main-card {
@@ -23,9 +27,10 @@
   overflow: hidden;
   animation: fadeIn 0.5s ease-out;
   min-height: 200px;
-  z-index: 100;
+  z-index: 10;
   opacity: 1 !important;
   visibility: visible !important;
+  display: block !important;
 }
 
 .main-card-bg {
@@ -102,11 +107,16 @@
 }
 
 .stars-card {
-  background: var(--tg-theme-secondary-bg-color);
+  background: var(--tg-theme-secondary-bg-color) !important;
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 16px;
   transition: all 0.3s ease;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10;
+  position: relative;
 }
 
 .stars-card.disabled {

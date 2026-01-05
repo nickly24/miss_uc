@@ -27,28 +27,8 @@ function App() {
   }, [initTelegram])
 
   return (
-    <div className="app" style={{ '--bg-image': `url(${bgImage})` }}>
-      {/* Простой тест - должен быть виден */}
-      <div style={{
-        position: 'fixed',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        background: 'red',
-        color: 'white',
-        padding: '30px',
-        fontSize: '24px',
-        fontWeight: 'bold',
-        zIndex: 999999,
-        borderRadius: '10px',
-        textAlign: 'center'
-      }}>
-        ТЕСТ РЕНДЕРА
-        <br />
-        Если видите это - React работает
-      </div>
-      
-      <Router basename={process.env.PUBLIC_URL || ''}>
+    <Router basename={process.env.PUBLIC_URL || ''}>
+      <div className="app" style={{ '--bg-image': `url(${bgImage})` }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/code-purchase" element={<CodePurchase />} />
@@ -57,8 +37,8 @@ function App() {
           <Route path="/my-codes" element={<MyCodes />} />
           <Route path="/instructions" element={<Instructions />} />
         </Routes>
-      </Router>
-    </div>
+      </div>
+    </Router>
   )
 }
 
