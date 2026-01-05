@@ -1,13 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useState, useCallback } from 'react'
 import { miniApp } from '@telegram-apps/sdk'
 
 export const useTelegram = () => {
   const [tg, setTg] = useState(null)
 
-  const initTelegram = async () => {
+  const initTelegram = useCallback(() => {
     try {
-      if (miniApp && miniApp.isAvailable()) {
+      console.log('initTelegram вызван')
+      console.log('miniApp доступен:', miniApp?.isAvailable?.())
+      
+      if (miniApp && miniApp.isAvailable && miniApp.isAvailable()) {
         setTg(miniApp)
+        console.log('miniApp установлен')
         
         // Функция для применения темы (всегда темная)
         const applyTheme = () => {
@@ -28,6 +32,7 @@ export const useTelegram = () => {
         // Применяем тему сразу
         applyTheme()
       } else {
+        console.log('miniApp не доступен, используем дефолтные настройки')
         // Для тестирования вне Telegram - используем темную тему
         document.documentElement.style.setProperty('--tg-theme-bg-color', '#1a1a1a')
         document.documentElement.style.setProperty('--tg-theme-text-color', '#ffffff')
@@ -47,7 +52,7 @@ export const useTelegram = () => {
       document.body.style.backgroundColor = '#1a1a1a'
       document.body.style.color = '#ffffff'
     }
-  }
+  }, [])
 
   return {
     tg,

@@ -24,7 +24,7 @@ function App() {
     } else {
       console.error('App element not found')
     }
-  }, [])
+  }, [initTelegram])
 
   return (
     <Router basename={process.env.PUBLIC_URL || ''}>
