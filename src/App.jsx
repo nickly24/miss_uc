@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { useTelegram } from './hooks/useTelegram'
 import Home from './pages/Home'
-import ModeSelection from './pages/ModeSelection'
 import CodePurchase from './pages/CodePurchase'
 import CodeCart from './pages/CodeCart'
-import AutoActivation from './pages/AutoActivation'
-import AutoCart from './pages/AutoCart'
 import OrderHistory from './pages/OrderHistory'
 import MyCodes from './pages/MyCodes'
 import Instructions from './pages/Instructions'
+import bgImage from './img/bg.jpg'
 import './App.css'
 
 function App() {
@@ -17,18 +15,20 @@ function App() {
 
   useEffect(() => {
     initTelegram()
+    // Устанавливаем фон для псевдоэлемента
+    const appElement = document.querySelector('.app')
+    if (appElement) {
+      appElement.style.setProperty('--bg-image', `url(${bgImage})`)
+    }
   }, [])
 
   return (
     <Router>
-      <div className="app">
+      <div className="app" style={{ '--bg-image': `url(${bgImage})` }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/mode-selection" element={<ModeSelection />} />
           <Route path="/code-purchase" element={<CodePurchase />} />
           <Route path="/code-cart" element={<CodeCart />} />
-          <Route path="/auto-activation" element={<AutoActivation />} />
-          <Route path="/auto-cart" element={<AutoCart />} />
           <Route path="/order-history" element={<OrderHistory />} />
           <Route path="/my-codes" element={<MyCodes />} />
           <Route path="/instructions" element={<Instructions />} />

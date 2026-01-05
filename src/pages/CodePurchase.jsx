@@ -47,7 +47,7 @@ const CodePurchase = () => {
         <div className="page-header">
           <button 
             className="back-button"
-            onClick={() => navigate('/mode-selection')}
+            onClick={() => navigate('/')}
           >
             ←
           </button>

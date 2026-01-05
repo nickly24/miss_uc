@@ -11,13 +11,19 @@ const Home = () => {
       <div className="page-container">
         {/* Главная плашка с кнопкой Пополнить */}
         <div className="main-card">
+          <div 
+            className="main-card-bg"
+            style={{
+              backgroundImage: `url(${process.env.PUBLIC_URL}/img/фон мисс бот копия.jpg)`
+            }}
+          ></div>
           <div className="main-card-content">
             <div className="main-card-icon">🎮</div>
             <h2 className="main-card-title">PUBG Mobile</h2>
             <p className="main-card-subtitle">Пополнение UC</p>
             <button 
               className="btn btn-primary main-card-button"
-              onClick={() => navigate('/mode-selection')}
+              onClick={() => navigate('/code-purchase')}
             >
               Пополнить
             </button>
