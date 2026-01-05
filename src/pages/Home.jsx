@@ -1,0 +1,42 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import BottomBar from '../components/BottomBar'
+import './Home.css'
+
+const Home = () => {
+  const navigate = useNavigate()
+
+  return (
+    <div className="home-page">
+      <div className="page-container">
+        {/* Главная плашка с кнопкой Пополнить */}
+        <div className="main-card">
+          <div className="main-card-content">
+            <div className="main-card-icon">🎮</div>
+            <h2 className="main-card-title">PUBG Mobile</h2>
+            <p className="main-card-subtitle">Пополнение UC</p>
+            <button 
+              className="btn btn-primary main-card-button"
+              onClick={() => navigate('/mode-selection')}
+            >
+              Пополнить
+            </button>
+          </div>
+        </div>
+
+        {/* Плашка TG STARS (недоступно) */}
+        <div className="stars-card disabled">
+          <div className="stars-card-content">
+            <div className="stars-card-icon">⭐</div>
+            <h3 className="stars-card-title">TG STARS</h3>
+            <p className="stars-card-subtitle">Недоступно</p>
+          </div>
+        </div>
+      </div>
+      
+      <BottomBar />
+    </div>
+  )
+}
+
+export default Home
